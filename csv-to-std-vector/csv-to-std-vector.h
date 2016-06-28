@@ -8,6 +8,8 @@
 #include <stdlib.h>
 
 /**
+    Author: Pouya Mohammadi
+    Date:   28 June, 2016
     This is a simple method that converts a csv file to a vector of vector fo doubles
     It works byt it is not the best way, nor is the most elegant or efficient way.
 */
