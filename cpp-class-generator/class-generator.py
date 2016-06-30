@@ -21,7 +21,7 @@ def createClass(className):
 	# include guard:
 	header.write('#ifndef '+className.upper()+'_HPP\n#define '+className.upper()+'_HPP\n\n')
 	# class declaration and stuff:
-	header.write('class '+className+' {\npublic:\t'+className+'();\n\t'+className+'(const '+className+'& orig);\n\tvirtual ~'+className+'();\n\nprivate:\n\nprotected:\n\n};\n')
+	header.write('class '+className+' {\npublic:\n\t'+className+'();\n\t'+className+'(const '+className+'& orig);\n\tvirtual ~'+className+'();\n\nprivate:\n\nprotected:\n\n};\n')
 	# endof guard
 	header.write('#endif // '+className.upper()+'_HPP\n')
 	# ----------------source----------------
