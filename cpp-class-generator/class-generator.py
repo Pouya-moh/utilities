@@ -35,7 +35,6 @@ if len(sys.argv)!=2:
 	print "Usage: Pass class name as command line argument. E.g., ./class-generator.py FooBar"
 	sys.exit()
 else:
-	print "class name: ",sys.argv[1] 
 	if os.path.isfile(sys.argv[1]+'.cpp'):
 		print sys.argv[1]+".cpp already exists"
 		sys.exit()
