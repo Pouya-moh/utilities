@@ -18,11 +18,16 @@ def writePitch(idx):
 	return '\tA'+str(idx)+' << cos(th'+str(idx)+'), 0,  sin(th'+str(idx)+'), 0,\n\t\t  sin(th'+str(idx)+'), 0, -cos(th'+str(idx)+'), 0,\n\t\t         0, 1,         0, 0,\n\t\t         0, 0,         0, 1;\n\n'
 
 def writeYaw(idx):
-	return '\tA'+str(idx)+' << cos(th'+str(idx)+'), -sin(th'+str(idx)+'), 0,   0,\n\t\t  sin(th'+str(idx)+'),  cos(th'+str(idx)+'), 0,   0,\n\t\t         0,         0, 1, 0.5,\n\t\t         0,         0, 0,   1;\n\n'
+	return '\tA'+str(idx)+' << cos(th'+str(idx)+'), -sin(th'+str(idx)+'), 0,   0,\n\t\t  sin(th'+str(idx)+'),  cos(th'+str(idx)+'), 0,   0,\n\t\t         0,         0, 1,  d'+str(int(idx/3))+',\n\t\t         0,         0, 0,   1;\n\n'
 
 
 def printMatrixes(dof):
 	ret = ''
+
+	for i in xrange(3,dof*3+1,3):
+		ret = ret + '\tdouble d'+str(int(i/3))+' = 0.3;\n'
+
+	ret = ret + '\n'
 	for i in xrange(1,dof*3+1):
 		ret = ret + '\tdouble th'+str(i)+' = configuration.at('+str(i)+');\n'
 
