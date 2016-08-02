@@ -12,8 +12,8 @@ import os.path
 import datetime
 
 radius = 0.01
-length = 0.02
-dof    = 30
+length = 0.05
+dof    = 8
 
 def writeHeader():	
 	ret = '<!-- Created by Pouya Mohammadi -->\n<robot name=\"robot\">\n\t<link name=\"world\"/>\n\n\t<joint name=\"fixed\" type=\"fixed\">\n\t\t<parent link=\"world\"/>\n\t\t<child link=\"base_link\"/>\n\t</joint>\n\n\t<link name=\"base_link\">\n\t\t<origin xyz=\"0 0 '+str(length/2)+'\" rpy=\"0 0 0\"/>\n\t\t<collision>\n\t\t\t<geometry>\n\t\t\t\t<cylinder length=\"'+str(length)+'\" radius=\"'+str(radius)+'\"/>\n\t\t\t</geometry>\n\t\t</collision>\n\t\t<visual>\n\t\t\t<geometry>\n\t\t\t\t<cylinder length=\"'+str(length)+'\" radius=\"'+str(radius)+'\"/>\n\t\t\t</geometry>\n\t\t</visual>\n\t<inertial>\n\t\t<origin xyz=\"0 0 '+str(length/2)+'\" rpy=\"0 0 0\"/>\n\t\t<mass value=\"0.159\"/>\n\t\t<inertia ixx=\"0.000057969\" ixy=\"0.0\" ixz=\"0.0\" iyy=\"0.000057969\" iyz=\"0.0\" izz=\"0.000049687\"/>\n\t</inertial>\n\t</link>\n'

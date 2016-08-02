@@ -10,3 +10,4 @@ Tiny tools to help development. Each directory in this repo contains a single to
 
 ## TODO
 1. Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
+2. In [cpp-snake-robot-generator](./cpp-snake-robot-generator), get the info as command line arguments (currently are set from the script).
