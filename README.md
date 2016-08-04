@@ -7,12 +7,10 @@ Tiny tools to help development. Each directory in this repo contains a single to
 3. [matlab-color-palette](./matlab-color-palette) contains matlab's new color palette. More on [mathworks website](http://www.mathworks.com/help/matlab/graphics_transition/why-are-plot-lines-different-colors.html).
 4. [matlab-denavit-hartenberg](./matlab-denavit-hartenberg) single function that returns denavit hartenberg matrix, given (\alpha, a, d, \theta).
 5. [cpp-snake-robot-generator](./cpp-snake-robot-generator) creates a c++ class with kinematics (EE pose and EE Jacobian) of a snake like robot with *n* spherical joints (in other words *dof = nx3*).
-6. [eigen-pinv](./eigen-pinv) is a header with methods for calculation of pseudo-inverse with Eigen library. Currently it contains:
+6. [eigen-pinv](./eigen-pinv) is a header with methods for calculation of pseudo-inverse with Eigen library. One method is taken from Eigen mailing list or their Wiki. Currently it contains:
     1. `pinv` (SVD based, slower)
     2. `pinv2` (right pseudo-inverse, faster but unstable near singularity)
     3. `Wpinv` (Weighted pseudo-inverse)
-
-   One method is taken from Eigen mailing list or their Wiki.
 
 ## TODO
 1. Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
