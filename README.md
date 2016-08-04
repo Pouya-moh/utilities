@@ -11,6 +11,7 @@ Tiny tools to help development. Each directory in this repo contains a single to
     1. `pinv` (SVD based, slower)
     2. `pinv2` (right pseudo-inverse, faster but unstable near singularity)
     3. `Wpinv` (Weighted pseudo-inverse)
+
    One method is taken from Eigen mailing list or their Wiki.
 
 ## TODO
