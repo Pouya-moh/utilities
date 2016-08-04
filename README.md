@@ -13,5 +13,9 @@ Tiny tools to help development. Each directory in this repo contains a single to
     3. `Wpinv` (Weighted pseudo-inverse)
 
 ## TODO
-1. Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
-2. In [cpp-snake-robot-generator](./cpp-snake-robot-generator), get the info as command line arguments (currently are set from the script).
+* Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
+* In [cpp-snake-robot-generator](./cpp-snake-robot-generator), get the info as command line arguments (currently are set from the script).
+* In [eigen-pinv](./eigen-pinv):
+    1. Fix Wpinv by removing constant values
+    2. Fix includes
+    3. Fix `float -> double`
