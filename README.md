@@ -18,4 +18,4 @@ Tiny tools to help development. Each directory in this repo contains a single to
 * In [eigen-pinv](./eigen-pinv):
     1. Fix Wpinv by removing constant values
     2. Fix includes
-    3. Fix `float -> double`
+    3. Make it templated
