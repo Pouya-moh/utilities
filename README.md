@@ -16,6 +16,5 @@ Tiny tools to help development. Each directory in this repo contains a single to
 * Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
 * In [cpp-snake-robot-generator](./cpp-snake-robot-generator), get the info as command line arguments (currently are set from the script).
 * In [eigen-pinv](./eigen-pinv):
-    1. Fix Wpinv by removing constant values
-    2. Fix includes
-    3. Make it templated
+    1. Fix includes
+    2. Test new templated version

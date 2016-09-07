@@ -23,21 +23,19 @@ _Matrix_Type_ pinv_SVD(const _Matrix_Type_ &a, double epsilon = std::numeric_lim
     return svd.matrixV() *  (svd.singularValues().array().abs() > tolerance).select(svd.singularValues().array().inverse(), 0).matrix().asDiagonal() * svd.matrixU().adjoint();
 }
 
-inline Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> pinv2(const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> &a) {
-    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> aT= a.transpose();
-    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> aaT = a*aT;
+template<typename _Matrix_Type_>
+_Matrix_Type_ pinv(const _Matrix_Type_ &a) {
+    _Matrix_Type_ aT= a.transpose();
+    _Matrix_Type_ aaT = a*aT;
     return aT*(aaT.inverse());
 }
 
-inline Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> Wpinv(const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> &a) {
-    Eigen::MatrixXf W(ROBOT_DOF_SIZE,ROBOT_DOF_SIZE);
-    W = Eigen::MatrixXf::Identity(ROBOT_DOF_SIZE,ROBOT_DOF_SIZE);
-    for (int i = 6; i < 11; i++)
-        W(i,i) = 3;
-
-    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> aT= a.transpose();
-    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> aaT = a*W*aT;
-    return W*aT*(aaT.inverse());
+template<typename _Matrix_Type_>
+inline _Matrix_Type_ Wpinv(const _Matrix_Type_ &a, const _Matrix_Type_ &w) {
+    _Matrix_Type_ aT= a.transpose();
+    _Matrix_Type_ aaT = a*w*aT;
+    return w*aT*(aaT.inverse());
 }
+
 
 #endif /* EIGEN_PINV_HPP */
