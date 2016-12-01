@@ -12,7 +12,7 @@
 
 
 #include <eigen3/Eigen/Core>
-#include <iostream>
+
 template <class T>
 class QuinticPolynomial
 {
@@ -27,7 +27,7 @@ public:
         this->q_i = init_conf;
         this->q_f = final_conf;
         this->delta_q = q_f - q_i;
-        this->dof = q_i.rows();
+        this->dof = q_i.size();
     }
 
     void setParams(double start_time, double end_time, Vector init_conf, Vector final_conf) {
@@ -37,7 +37,7 @@ public:
         this->q_i = init_conf;
         this->q_f = final_conf;
         this->delta_q = q_f - q_i;
-        this->dof = q_i.rows();
+        this->dof = q_i.size();
     }
 
     Vector getQ(double time) {
