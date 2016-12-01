@@ -11,6 +11,7 @@ Tiny tools to help development. Each directory in this repo contains a single to
     1. `pinv` (SVD based, slower)
     2. `pinv2` (right pseudo-inverse, faster but unstable near singularity)
     3. `Wpinv` (Weighted pseudo-inverse)
+7. [quintic-polynomial](./quintic-polynomial) single header, templated cpp class to generate 'q, qd, qdd', given that initial and final velocities and accelerations are zero.
 
 ## TODO
 * Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
@@ -18,3 +19,4 @@ Tiny tools to help development. Each directory in this repo contains a single to
 * In [eigen-pinv](./eigen-pinv):
     1. Fix includes
     2. Test new templated version
+* Add documentation to [quintic-polynomial](./quintic-polynomial).
