@@ -10,10 +10,9 @@
 #define EIGEN_PINV_HPP
 
 #include <iostream>
-#include "Eigen/Eigen/SVD"
-#include "Eigen/Eigen/Core"
-#include "Eigen/Eigen/Dense"
-#include "constant_values.hpp"
+#include <Eigen/SVD>
+#include <Eigen/Core>
+#include <Eigen/Dense>
 #include <limits>
 
 template<typename _Matrix_Type_>
