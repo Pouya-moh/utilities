@@ -12,6 +12,7 @@ Tiny tools to help development. Each directory in this repo contains a single to
     2. `pinv2` (right pseudo-inverse, faster but unstable near singularity)
     3. `Wpinv` (Weighted pseudo-inverse)
 7. [quintic-polynomial](./quintic-polynomial) single header, templated cpp class to generate 'q, qd, qdd', given that initial and final velocities and accelerations are zero.
+8. [gazebo-dummy-model](./gazebo-dummy-model) helper/simple gazebo object that does not interact/collide with  environment. Inspired by v-rep dummy object.
 
 ## TODO
 * Test [cpp-snake-robot-generator](./cpp-snake-robot-generator).
