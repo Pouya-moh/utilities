@@ -19,7 +19,7 @@ class QuinticPolynomial
 public:
     typedef Eigen::Matrix<T, Eigen::Dynamic, 1> Vector;
 
-    QuinticPolynomial();
+    QuinticPolynomial(){}
     QuinticPolynomial(double start_time, double end_time, Vector init_conf, Vector final_conf) {
         this->start_time = start_time;
         this->end_time   = end_time;
