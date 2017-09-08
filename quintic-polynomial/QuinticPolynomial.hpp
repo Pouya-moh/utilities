@@ -61,7 +61,6 @@ public:
         for (int i=0; i<dof; ++i){
             _ret(i) = q_i(i) + delta_q(i)*(6.0*std::pow(tau,5.0)-15.0*std::pow(tau,4.0)+10.0*std::pow(tau,3.0));            
         }
-        return ret;
     }
 
     Vector getQd(double time) {
@@ -86,8 +85,6 @@ public:
         for (int i=0; i<dof; ++i){
             _ret(i) = - delta_q(i)*(30.0*std::pow(tau,4.0)-60.0*std::pow(tau,3.0)+30.0*std::pow(tau,2.0));
         }
-
-        return ret;
     }
 
     Vector getQdd(double time) {
@@ -112,8 +109,6 @@ public:
         for (int i=0; i<dof; ++i){
             _ret(i) = - delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
         }
-
-        return ret;
     }
 
     int getDofSize() {
