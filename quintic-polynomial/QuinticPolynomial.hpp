@@ -52,6 +52,18 @@ public:
         return ret;
     }
 
+    void getQ(double time, Vector & _ret) {
+        // Vector ret(dof);
+        if (time >= end_time)
+            time = end_time;
+
+        double tau = (time-start_time)/(deltaT);
+        for (int i=0; i<dof; ++i){
+            _ret(i) = q_i(i) + delta_q(i)*(6.0*std::pow(tau,5.0)-15.0*std::pow(tau,4.0)+10.0*std::pow(tau,3.0));            
+        }
+        return ret;
+    }
+
     Vector getQd(double time) {
         Vector ret(dof);
         if (time >= end_time)
@@ -65,6 +77,19 @@ public:
         return ret;
     }
 
+    void getQd(double time, Vector & _ret) {
+        // Vector ret(dof);
+        if (time >= end_time)
+            time = end_time;
+
+        double tau = (time-start_time)/(deltaT);
+        for (int i=0; i<dof; ++i){
+            _ret(i) = - delta_q(i)*(30.0*std::pow(tau,4.0)-60.0*std::pow(tau,3.0)+30.0*std::pow(tau,2.0));
+        }
+
+        return ret;
+    }
+
     Vector getQdd(double time) {
         Vector ret(dof);
         if (time >= end_time)
@@ -73,6 +98,19 @@ public:
         double tau = (time-start_time)/(deltaT);
         for (int i=0; i<dof; ++i){
             ret(i) = - delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
+        }
+
+        return ret;
+    }
+
+    void getQdd(double time, Vector & _ret) {
+        // Vector ret(dof);
+        if (time >= end_time)
+            time = end_time;
+
+        double tau = (time-start_time)/(deltaT);
+        for (int i=0; i<dof; ++i){
+            _ret(i) = - delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
         }
 
         return ret;
