@@ -70,7 +70,7 @@ public:
 
         double tau = (time-start_time)/(deltaT);
         for (int i=0; i<dof; ++i){
-            ret(i) = delta_q(i)*(30.0*std::pow(tau,4.0)-60.0*std::pow(tau,3.0)+30.0*std::pow(tau,2.0));
+            ret(i) = std::pow(deltaT, -1)*delta_q(i)*(30.0*std::pow(tau,4.0)-60.0*std::pow(tau,3.0)+30.0*std::pow(tau,2.0));
         }
 
         return ret;
@@ -83,7 +83,7 @@ public:
 
         double tau = (time-start_time)/(deltaT);
         for (int i=0; i<dof; ++i){
-            _ret(i) = delta_q(i)*(30.0*std::pow(tau,4.0)-60.0*std::pow(tau,3.0)+30.0*std::pow(tau,2.0));
+            _ret(i) = std::pow(deltaT, -1)*delta_q(i)*(30.0*std::pow(tau,4.0)-60.0*std::pow(tau,3.0)+30.0*std::pow(tau,2.0));
         }
     }
 
@@ -94,7 +94,7 @@ public:
 
         double tau = (time-start_time)/(deltaT);
         for (int i=0; i<dof; ++i){
-            ret(i) = delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
+            ret(i) = std::pow(deltaT, -2)*delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
         }
 
         return ret;
@@ -107,7 +107,7 @@ public:
 
         double tau = (time-start_time)/(deltaT);
         for (int i=0; i<dof; ++i){
-            _ret(i) = delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
+            _ret(i) = std::pow(deltaT, -2)*delta_q(i)*(120.0*std::pow(tau,3.0)-180.0*std::pow(tau,2.0)+60*tau);
         }
     }
 
