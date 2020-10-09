@@ -5,6 +5,8 @@
  * Created on Friday June 3, 2015, 11:57
  * This is based on quintic ploynomial presented in 
  * Prof. Allesandro de Luca's slides of robotics 1.
+ * 
+ * SPDX-License-Identifier: GPL-2.0
  */
 
 #ifndef QUINTICPOLYNOMIAL_HPP
