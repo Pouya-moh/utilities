@@ -24,6 +24,7 @@ Tiny tools to help development. Each directory in this repo contains a single to
 * Add documentation to [quintic-polynomial](./quintic-polynomial).
 * [component-generator](./component-generator) needs to be tested. 
 * [component-generator](./component-generator) can have a template of a port 
-* For the [quintic-polynomial](./quintic-polynomial):
+* For the [quintic-polynomial](./quintic-polynomial):    
     1. Do an optimization using Sinan's suggestion
     2. Consider Julian's pull request
+    3. OMG, now that I think about it my return when `time >= end_time` is very dumb. FIXIT!
